@@ -9,7 +9,8 @@ Module developed to standardize the creation of cluster roles in K8S environment
 
 | Module Version | Terraform Version | Kubernetes Provider Version |
 |----------------|-------------------| --------------------------- |
-| v1.0.0         | v1.6.4            | 2.23.0                      |
+| v1.0.0         | v1.1.8            | 2.12.1                      |
+| v2.0.0         | >= v1.7.3         | >= 2.25.2                   |
 
 ## Specifying a version
 

@@ -22,7 +22,7 @@ resource "kubernetes_cluster_role" "clusterrole" {
     for_each = var.aggregation_rule != null ? [var.aggregation_rule] : []
     content {
       dynamic "cluster_role_selectors" {
-        for_each = aggregation_rule.value.cluster_role_selectors
+        for_each = aggregation_rule.value.cluster_role_selectors != null ? [aggregation_rule.value.cluster_role_selectors] : []
         content {
           match_labels = lookup(cluster_role_selectors.value, "match_labels", null)
           dynamic "match_expressions" {
